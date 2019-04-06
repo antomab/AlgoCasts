@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link type="text/css"
+          rel="stylesheet"
+          href="products.css"/>
+</head>
+<body>
+
+<section class="main-body">
+    <ul id="products">
+
+    </ul>
+</section>
+
+</body>
+
+<script type="text/template" id="item-template">
+    <li class="item {{bookid}}" data-book-info="{{bookid}}">
+        <div class="column image">
+            <img src="{{cover}}" alt="book cover">
+        </div>
+
+        <div class="column info">
+            <h2 class="title">{{title}}</h2>
+            <p>By <span class="author">{{author}}</span></p>
+        </div>
+
+        <div class="column actions">
+            <button class="like">Like</button>
+            <button class="remove">Remove</button>
+        </div>
+    </li>
+</script>
+
+<script type="text/javascript" src="products.js" ></script>
+
+
+</html>

@@ -1,0 +1,98 @@
+/* set some defaults */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    font-size: 10px;
+    font-family: sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+
+#products {
+    max-width: 80%;
+    font-size: 1.6rem;
+}
+
+#products .item {
+    width: 100%;
+    padding: 2rem;
+    border-top: 1px solid grey;
+}
+#products .item:last-child {
+    border-bottom: 1px solid grey;
+}
+
+.item .column {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.item .image {
+    height: 100%;
+}
+.image img {
+    width: 100%;
+}
+
+.item .info {
+    margin: 2rem;
+}
+
+.item .actions {
+    width: 100%;
+    text-align: center;
+    float: none;
+    padding-top: 1rem;
+}
+.actions button {
+    padding: 1rem;
+    margin-right: 1rem;
+}
+.actions button:last-child {
+    margin-right: 0;
+}
+/* in scss would use mixins */
+
+/*large*/
+@media screen and (min-width: 781px ) {
+    .item .image {
+        width: 25%;
+    }
+    .item .info {
+        width: 40%;
+    }
+    .item .actions {
+        float: right;
+        width: auto;
+    }
+}
+
+/*medium*/
+@media screen and (min-width: 521px) and (max-width: 780px) {
+    .item .image {
+        width: 25%;
+    }
+}
+
+/*small*/
+@media screen and (max-width: 520px) {
+    .item .image {
+        width: 30%;
+        display: block;
+        margin: 0 auto;
+    }
+    .item .info {
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+    }
+}
+/****************************/
